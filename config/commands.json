@@ -13,6 +13,20 @@
 		"description": "Fetches details of the specified Ruby gem"
 	},
 
+	"!servers": {
+		"alias": [],
+		"endpoint": "#",
+		"help": "servers",
+		"description": "Fetches server details"
+	},
+
+	"!pizza": {
+		"alias": [],
+		"endpoint": "#",
+		"help": "howManyPizza(people, [slicesXperson], [#slicesXpizza])",
+		"description": "This module helps you to calculate how many Pizza you need based on number of people you want to feed."
+	},
+
 	"error": {
 		"exclude": true
 	}
