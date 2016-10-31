@@ -2,7 +2,7 @@ var request = require('request'),
 	util 	= require('../util');
 
 module.exports = function (param) {
-	var	channel		= param.channel,
+	var	channel		= "#training",
 		endpoint	= param.commandConfig.endpoint.replace('{gem}', param.args[0]);
 		
 	request(endpoint, function (err, response, body) {

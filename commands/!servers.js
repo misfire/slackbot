@@ -21,11 +21,12 @@ module.exports = function (param) {
     function serverContent(state) {
         if(state.error){
       console.log("Server is offline");
+      done(null, cache)
     }
         else {
           //  console.log("done");
     //  console.log(state);
-      cache = state.name + " Map: " + state.map + " Players: " + state.raw.numplayers + "/" + state.maxplayers
+      cache = state.name + " - Map: " + state.map + " - Players: " + state.raw.numplayers + "/" + state.maxplayers + "\n - IP: " + state.query.host + ":" + state.query.port + " - <steam://connect/" + state.query.host + ":" + state.query.port + "|Connect>"
       done(null, cache)
     }
 
@@ -44,10 +45,11 @@ module.exports = function (param) {
     function(state) {
         if(state.error){
       console.log("Server is offline");
+      done(null, cache)
     }
         else {
    //   console.log(state);
-      cache += "\n" + state.name + " Map: " + state.map + " Players: " + state.raw.numplayers + "/" + state.maxplayers
+      cache += "\n" + state.name + " - Map: " + state.map + " - Players: " + state.raw.numplayers + "/" + state.maxplayers + "\n - IP: " + state.query.host + ":" + state.query.port + " - <steam://connect/" + state.query.host + ":" + state.query.port + "|Connect>"
     //  console.log(cache);
        done(null, step1result)
     }
@@ -68,10 +70,11 @@ module.exports = function (param) {
     function(state) {
         if(state.error){
       console.log("Server is offline");
+      done(null, cache)
     }
         else {
       console.log(state);
-      cache += "\n" + state.name + " Map: " + state.map + " Players: " + state.raw.numplayers + "/" + state.maxplayers
+      cache += "\n" + state.name + " - Map: " + state.map + " - Players: " + state.raw.numplayers + "/" + state.maxplayers + "\n - IP: " + state.query.host + ":" + state.query.port + " - <steam://connect/" + state.query.host + ":" + state.query.port + "|Connect>"
     //  console.log(cache);
        done(null,step2result);
     }
@@ -98,7 +101,7 @@ module.exports = function (param) {
     }
         else {
       console.log(state);
-      cache += "\n" + state.name + " Map: " + state.map + " Players: " + state.raw.numplayers + "/" + state.maxplayers
+      cache += "\n" + state.name + " - Map: " + state.map + " - Players: " + state.raw.numplayers + "/" + state.maxplayers + "\n - IP: " + state.query.host + ":" + state.query.port + " - <steam://connect/" + state.query.host + ":" + state.query.port + "|Connect>"
     //  console.log(cache);
        done(null,step3result);
     }
@@ -125,7 +128,7 @@ module.exports = function (param) {
     }
         else {
       console.log(state);
-      cache += "\n" + state.name + " Map: " + state.map + " Players: " + state.raw.numplayers + "/" + state.maxplayers
+      cache += "\n" + state.name + " - Map: " + state.map + " - Players: " + state.raw.numplayers + "/" + state.maxplayers + "\n - IP: " + state.query.host + ":" + state.query.port + " - <steam://connect/" + state.query.host + ":" + state.query.port + "|Connect>"
     //  console.log(cache);
        done(null,step4result);
     }
@@ -152,7 +155,7 @@ module.exports = function (param) {
     }
         else {
       console.log(state);
-      cache += "\n" + state.name + " Map: " + state.map + " Players: " + state.raw.numplayers + "/" + state.maxplayers
+      cache += "\n" + state.name + " - Map: " + state.map + " - Players: " + state.raw.numplayers + "/" + state.maxplayers + "\n - IP: " + state.query.host + ":" + state.query.port + " - <steam://connect/" + state.query.host + ":" + state.query.port + "|Connect>"
     //  console.log(cache);
        done(null);
     }
