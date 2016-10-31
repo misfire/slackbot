@@ -1,6 +1,9 @@
-# slack-sample-cli
+# slack bot
 
-Sample app to work with [slack-terminalize](https://www.npmjs.com/package/slack-terminalize "slack terminalize at npm") with some basic custom commands
+Modified slackbot with custom commands for my slack team.
+
+!server
+Brings up status of all my game servers.
 
 # Setup
 
